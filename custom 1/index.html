@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaRella</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <link rel="icon" href="../images/logo.jpeg" type="images//x-icon">
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+        <div class="container">
+            <a class="navbar-brand" href="../html/index.html">
+                <img src="../images/logo.jpeg" alt="logo" height="100px" width="120px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/index.html" style="font-size: larger;">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../menu/index.html" style="font-size: larger;">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../resources/index.html" style="font-size: larger;">Resources</a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a class="nav-link" href="../contact us/index.html" style="font-size: larger;">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <form class="d-flex me-3">
+                        <input class="form-control me-2 search-input" type="search" placeholder="Search..."
+                            aria-label="Search">
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                    <a href="../signup/index.html" alt="sign up">
+                        <button class="btn btn-custom me-2">Sign Up</button>
+                    </a>
+                    <a href="../login/index.html" alt="login">
+                        <button class="btn btn-custom">Log In</button>
+                    </a>
+
+                </div>
+            </div>
+            <a href="../cart/index.html" alt="mycart">
+                <a class="nav-link" href="../cart/index.html">
+
+                    <button class="btn btn-custom"> My Cart</button>
+
+                </a>
+        </div>
+    </nav>
+
+
+    <div class="container mt-4">
+        <h1>Customize Your Pizza</h1>
+        <p>Select your ingredients below:</p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Choose Your Toppings</h3>
+                <div class="row">
+                    <div class="col-6 ingredient">
+                        <img src="../images/pep.jpg" alt="Pepperoni" class="img-fluid">
+                        <span>Pepperoni</span>
+                        <button class="btn btn-success btn-sm add-button"> + </button>
+                    </div>
+                    <div class="col-6 ingredient">
+                        <img src="../images/mushrooms.jpg" alt="Mushrooms" class="img-fluid">
+                        <span>Mushrooms</span>
+                        <button class="btn btn-success btn-sm add-button"> + </button>
+                    </div>
+                    <div class="col-6 ingredient">
+                        <img src="../images/onions.avif" alt="Onions" class="img-fluid">
+                        <span>Onions</span>
+                        <button class="btn btn-success btn-sm add-button"> + </button>
+                    </div>
+                    <div class="col-6 ingredient">
+                        <img src="../images/green pepers.jpg" alt="Green Peppers" class="img-fluid">
+                        <span>Green Peppers</span>
+                        <button class="btn btn-success btn-sm add-button"> + </button>
+                    </div>
+                    <div class="col-6 ingredient">
+                        <img src="../images/mozzarella.jpg" alt="Extra Cheese" class="img-fluid">
+                        <span>Extra Cheese</span>
+                        <button class="btn btn-success btn-sm add-button"> + </button>
+                    </div>
+                    <div class="col-6 ingredient">
+                        <img src="../images/olives.jpg" alt="Olives" class="img-fluid">
+                        <span>Olives</span>
+                        <button class="btn btn-success btn-sm add-button"> + </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" id="selectedIngredientsSection">
+                <h3>Your Selected Ingredients</h3>
+                <ul id="selectedIngredients" class="list-group">
+
+                    <button type="submit" class="btn btn-primary">Add to Cart</button>
+            </div>
+
+
+        </div>
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center mt-4">
+                <li class="page-item active" id="page1"><a class="page-link" href="../custom 1/index.html">1</a>
+                </li>
+                <li class="page-item" id="page2"><a class="page-link" href="../custom2/index.html">2</a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addButtons = document.querySelectorAll('.add-button');
+            const selectedIngredientsList = document.getElementById('selectedIngredients');
+            const saveToCartButton = document.getElementById('saveToCart');
+
+
+            addButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const ingredientName = button.previousElementSibling.textContent;
+
+
+                    const existingItems = selectedIngredientsList.getElementsByTagName('li');
+                    for (let i = 0; i < existingItems.length; i++) {
+                        if (existingItems[i].textContent.includes(ingredientName)) {
+                            alert(`${ingredientName} is already selected!`);
+                            return;
+                        }
+                    }
+
+
+                    const listItem = document.createElement('li');
+                    listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+                    listItem.textContent = ingredientName;
+
+
+                    const removeButton = document.createElement('button');
+                    removeButton.className = 'btn btn-danger btn-sm';
+                    removeButton.textContent = 'Remove';
+                    removeButton.onclick = () => {
+                        selectedIngredientsList.removeChild(listItem);
+                    };
+
+                    listItem.appendChild(removeButton);
+                    selectedIngredientsList.appendChild(listItem);
+                });
+            });
+
+        });
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h5>Quick Links</h5>
+                    <a href="../html/index.html" class="btn btn-outline-light me-2">Home</a>
+                    <a href="../contact us/index.html" class="btn btn-outline-light me-2">Contact Us</a>
+                    <a href="../menu/index.html" class="btn btn-outline-light me-2">Menu</a>
+                    <a href="../privacy policy/index.html" class="btn btn-outline-light">Privacy Policy</a>
+                    <a href="../resources/index.html" class="btn btn-outline-light">Resources</a>
+
+
+
+                </div>
+
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12 text-center">
+                    <h5>Feedback</h5>
+                    <form>
+                        <textarea class="form-control mb-2" rows="3" placeholder="Leave your feedback here..."
+                            required></textarea>
+                        <button type="submit" class="btn btn-custom">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="bi bi-facebook"></a>
+                <a href="https://twitter.com" target="_blank" class="bi bi-twitter"></a>
+                <a href="https://www.instagram.com" target="_blank" class="bi bi-instagram"></a>
+
+            </div>
+            <div class="text-center pt-3">
+                <p>&copy; 2024 PizzaRella. All rights reserved.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,500 @@
+body {
+    background-color: #f8f9fa;
+    justify-content: center;
+}
+
+.navbar-brand {
+    margin-left: -190px;
+    font-size: large;
+    display: flex;
+}
+
+.nav-item.active .nav-link {
+
+    color: red;
+}
+
+.nav-item-cart {
+    margin-right: 10px;
+}
+
+
+.navbar-nav {
+    text-align: center;
+    margin-left: 100px;
+    display: flex;
+}
+
+.header {
+    text-align: right;
+    display: flex;
+
+}
+
+h5,
+h6,
+h7 {
+    color: white;
+    font-size: 30px;
+}
+
+.hero-container {
+    height: 700px;
+    width: 1750px;
+    background-image: url(../images/banner.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+
+}
+
+.btn-custom {
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.style {
+    color: green;
+    font-size: 50px;
+}
+
+.styles {
+    color: #ff5733;
+    font-size: 50px;
+}
+
+.product-section,
+.resource-section,
+.contact-section {
+    padding: 40px 0;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.carousel-inner img {
+    max-height: 500px;
+
+    object-fit: contain;
+
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    border-radius: 40%;
+
+}
+
+h1,
+h2 {
+
+    color: #333;
+}
+
+p {
+    color: black;
+}
+
+
+.recipe-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.recipe-card h3 {
+    margin-top: 0;
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+ul {
+    margin-left: 20px;
+    font-size: large;
+}
+
+p {
+    font-size: large;
+}
+
+.menu-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.menu-item img {
+    max-width: 100%;
+
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+
+
+.card {
+    margin-bottom: 20px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.list-group-item {
+    background-color: #f8f9fa;
+}
+
+.btn-success {
+    margin-left: 10px;
+    background-color: #ff6347;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+h1,
+h2 {
+    color: black;
+
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.text-center h3 {
+    margin: 10px 0;
+}
+
+h1,
+h2,
+h3 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+.container {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.ingredient {
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.ingredient img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.list-group {
+    background-color: #f8f9fa;
+    justify-content: center;
+}
+
+h1,
+h2,
+h3 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+.container {
+    margin-top: 20px;
+
+}
+
+.ingredient {
+    margin-bottom: 15px;
+}
+
+.ingredient img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.list-group {
+    background-color: #f8f9fa;
+
+}
+
+.btn-custom {
+    background-color: #ff5733;
+    color: white;
+
+}
+
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    background-color: #ff5733;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 20px;
+    font-size: large;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+
+
+}
+
+.btns-custom {
+    margin-left: 800px;
+    margin-top: 20px;
+}
+
+.contact-section {
+    padding: 40px 0;
+    text-align: left;
+}
+
+.main-section {
+    padding: 40px 0;
+    text-align: left;
+}
+
+.product-section {
+    padding: 40px 0;
+    text-align: left;
+
+}
+
+.resource-section {
+    background-color: #e9ecef;
+    text-align: left;
+    padding: 40px 0;
+    font-size: larger;
+}
+
+.resources-text {
+
+    text-align: left;
+
+}
+
+.resources-image {
+    max-width: 700px;
+
+}
+
+.resources-image img {
+    width: 700px;
+
+    height: auto;
+    margin-left: 200px;
+    border-radius: 8px;
+    padding-bottom: 100px;
+}
+
+.btn-custom {
+    background-color: #ff5733;
+    color: white;
+}
+
+.btns-custom {
+    background-color: #ff5733;
+    color: white;
+
+
+
+}
+
+.contact-img {
+    width: 700px;
+
+    height: auto;
+    margin-left: 1300px;
+    margin-top: -500px;
+    border-radius: 8px;
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin-left: 690px;
+    margin-top: -450px;
+    background: #ffffff;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
+.cart-item {
+    margin-bottom: 20px;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.result img {
+    margin: 10px 0;
+    border-radius: 50%;
+    max-width: 200px;
+}
+
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
+}
+
+
+.search-input {
+    width: 150px;
+
+}
+
+.feedback-textarea {
+    width: 200px;
+
+    max-width: 50%;
+
+}
+
+.social-icons {
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+.social-icons {
+    color: white;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f0f0f0;
+}
